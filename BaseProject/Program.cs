@@ -8,38 +8,38 @@ using System.Linq;
 
 namespace BaseProject
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var host = CreateHostBuilder(args).Build();
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			var host = CreateHostBuilder(args).Build();
 
-            using var scope = host.Services.CreateScope();
+			using var scope = host.Services.CreateScope();
 
-            var identityDbContext = scope.ServiceProvider.GetRequiredService<AppIdentityDbContext>();
+			var identityDbContext = scope.ServiceProvider.GetRequiredService<AppIdentityDbContext>();
 
-            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+			var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
 
-            identityDbContext.Database.Migrate();
+			identityDbContext.Database.Migrate();
 
-            if (!userManager.Users.Any())
-            {
-                userManager.CreateAsync(new AppUser() { UserName = "User1", Email = "user1@outlook.com" }, "Password12*").Wait();
-                userManager.CreateAsync(new AppUser() { UserName = "User2", Email = "user2@outlook.com" }, "Password12*").Wait();
-                userManager.CreateAsync(new AppUser() { UserName = "User3", Email = "user3@outlook.com" }, "Password12*").Wait();
-                userManager.CreateAsync(new AppUser() { UserName = "User4", Email = "user4@outlook.com" }, "Password12*").Wait();
-                userManager.CreateAsync(new AppUser() { UserName = "User5", Email = "user5@outlook.com" }, "Password12*").Wait();
+			if (!userManager.Users.Any())
+			{
+				userManager.CreateAsync(new AppUser() { UserName = "User1", Email = "user1@outlook.com" }, "Password12*").Wait();
+				userManager.CreateAsync(new AppUser() { UserName = "User2", Email = "user2@outlook.com" }, "Password12*").Wait();
+				userManager.CreateAsync(new AppUser() { UserName = "User3", Email = "user3@outlook.com" }, "Password12*").Wait();
+				userManager.CreateAsync(new AppUser() { UserName = "User4", Email = "user4@outlook.com" }, "Password12*").Wait();
+				userManager.CreateAsync(new AppUser() { UserName = "User5", Email = "user5@outlook.com" }, "Password12*").Wait();
 
-            }
+			}
 
-            host.Run();
-        }
+			host.Run();
+		}
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+		public static IHostBuilder CreateHostBuilder(string[] args) =>
+			Host.CreateDefaultBuilder(args)
+				.ConfigureWebHostDefaults(webBuilder =>
+				{
+					webBuilder.UseStartup<Startup>();
+				});
+	}
 }
