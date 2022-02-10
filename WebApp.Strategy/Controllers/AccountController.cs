@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace BaseProject.Controllers
+namespace WebApp.Strategy.Controllers
 {
     public class AccountController : Controller
     {

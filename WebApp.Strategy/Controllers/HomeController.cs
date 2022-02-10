@@ -1,9 +1,9 @@
-﻿using BaseProject.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using WebApp.Strategy.Models;
 
-namespace BaseProject.Controllers
+namespace WebApp.Strategy.Controllers
 {
     public class HomeController : Controller
     {
