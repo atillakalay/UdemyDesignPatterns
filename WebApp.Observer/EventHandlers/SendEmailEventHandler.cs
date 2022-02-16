@@ -7,7 +7,7 @@ using WebApp.Observer.Events;
 
 namespace WebApp.Observer.EventHandlers
 {
-    public class SendEmailEventHandler : INotificationHandler<UserCreatedEvent>
+    public class SendEmailEventHandler 
     {
         private readonly ILogger<SendEmailEventHandler> _logger;
 

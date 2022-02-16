@@ -5,7 +5,7 @@ using WebApp.Observer.Events;
 
 namespace WebApp.Observer.EventHandlers
 {
-    public class CreatedUserWriteConsoleEventHandler : INotificationHandler<UserCreatedEvent>
+    public class CreatedUserWriteConsoleEventHandler
     {
         private readonly ILogger<CreatedUserWriteConsoleEventHandler> _logger;
 

@@ -2,7 +2,7 @@
 
 namespace WebApp.Observer.Events
 {
-    public class UserCreatedEvent : INotification
+    public class UserCreatedEvent 
     {
         public AppUser AppUser { get; set; }
     }

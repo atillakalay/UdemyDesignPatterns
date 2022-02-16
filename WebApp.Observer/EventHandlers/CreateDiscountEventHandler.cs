@@ -6,7 +6,7 @@ using WebApp.Observer.Events;
 
 namespace WebApp.Observer.EventHandlers
 {
-    public class CreateDiscountEventHandler : INotificationHandler<UserCreatedEvent>
+    public class CreateDiscountEventHandler
     {
         private readonly AppIdentityDbContext _context;
         private readonly ILogger<CreateDiscountEventHandler> _logger;
