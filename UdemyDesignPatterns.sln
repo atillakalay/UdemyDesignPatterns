@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Observer", "WebApp.O
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.ChainOfResponsibility", "WebApp.ChainOfResponsibility\WebApp.ChainOfResponsibility.csproj", "{35C7B899-79BA-4D20-8100-3A4B631010E0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Composite", "WebApp.Composite\WebApp.Composite.csproj", "{B7331847-4905-4DC9-82FC-6C7D90CDE2CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{35C7B899-79BA-4D20-8100-3A4B631010E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35C7B899-79BA-4D20-8100-3A4B631010E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35C7B899-79BA-4D20-8100-3A4B631010E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7331847-4905-4DC9-82FC-6C7D90CDE2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7331847-4905-4DC9-82FC-6C7D90CDE2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7331847-4905-4DC9-82FC-6C7D90CDE2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7331847-4905-4DC9-82FC-6C7D90CDE2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
